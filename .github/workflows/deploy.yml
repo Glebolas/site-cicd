@@ -15,6 +15,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # ---- ШАГ ИНДИВИДУАЛЬНОГО ПРОЕКТА: ЛИНТИНГ HTML ----
+      - name: Lint HTML files
+        uses: htmlhint/htmlhint-action@v2
+        with:
+          file_pattern: '*.html'
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
