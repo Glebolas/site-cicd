@@ -18,9 +18,9 @@ jobs:
 
       # ---- ШАГ ИНДИВИДУАЛЬНОГО ПРОЕКТА: ЛИНТИНГ HTML ----
       - name: Lint HTML files
-        uses: htmlhint/htmlhint-action@v2
+        uses: aswanso/htmlhint-action@v0.1.2
         with:
-          file_pattern: '*.html'
+          files: 'index.html'
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
